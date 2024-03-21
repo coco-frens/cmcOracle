@@ -11,6 +11,21 @@ const decimals = 18
 
 module.exports = {
 
+  status: async (req, res) => {
+    try {
+      // ideas
+      // does redis work?
+      // number of requests in the last 24h / metrics
+      // disk space
+      // cpu full?
+      // memory full?
+      res.status(200).send('OK')
+    } catch (error) {
+      console.log(error)
+      res.status(500).send('Application Error')
+    }
+  },
+
   // total supply
   totalcoins: async (req, res) => {
     try {

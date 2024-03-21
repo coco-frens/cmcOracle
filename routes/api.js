@@ -1,6 +1,10 @@
 const router = require('express-promise-router')()
 const apiController = require('../controllers/api.js')
 
+router.route('/status')
+  .get(
+    apiController.status)
+
 router.route('/totalcoins')
   .get(
     apiController.totalcoins)
