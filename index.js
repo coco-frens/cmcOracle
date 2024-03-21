@@ -16,7 +16,6 @@ async function main() {
   app.use(logger('dev'))
   app.use(express.json())
   app.use('/api', apiRouter)
-
   app.listen(process.env.PORT)
   console.log("Watcher listening on: " + process.env.PORT)
 }
